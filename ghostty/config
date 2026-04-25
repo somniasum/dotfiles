@@ -1,74 +1,63 @@
 
-# Run `ghostty +show-config --default --docs` to view a list of
-# Ghostty's website, at https://ghostty.org/docs/config.
 
-# ~/.config/ghostty/config
 
-# --- Font ---
 font-family = "Geist Mono"
 font-size = 13.5
 font-style = "Regular"
 font-thicken = false
 
-# --- Cursor ---
 cursor-style = bar
 cursor-style-blink = true
 cursor-color = #9d7dfa
 
-# --- Base Colors ---
 background = #0e0d14
 foreground = #e8e4f5
 
 selection-background = #2d2a4a
 selection-foreground = #f0eeff
 
-# --- Palette ---
-# Black (bg variants)
+# Background
 palette = 0=#0e0d14
 palette = 8=#3a3760
 
-# Red (errors, warnings)
+# errors, warnings
 palette = 1=#f87171
 palette = 9=#fca5a5
 
-# Green (success, added)
+# success, added
 palette = 2=#4ade9f
 palette = 10=#86efcc
 
-# Yellow / Amber (hashes, numbers, warnings)
+# hashes, numbers, warnings
 palette = 3=#fbbf24
 palette = 11=#fde68a
 
-# Blue (paths, links, info)
+# paths, links, info
 palette = 4=#5eaeff
 palette = 12=#93c5fd
 
-# Magenta / Pink (branches, chores, tags)
+# branches, chores, tags
 palette = 5=#f472b6
 palette = 13=#f9a8d4
 
-# Cyan (URLs, socket output)
+# URLs, socket output
 palette = 6=#22d3ee
 palette = 14=#67e8f9
 
-# White (primary text)
+# primary text
 palette = 7=#e8e4f5
 palette = 15=#f5f3ff
 
-# --- Window ---
 window-decoration = false
 window-padding-x = 20
 window-padding-y = 16
 background-opacity = 0.97
 maximize = true
 
-# --- Behavior ---
 confirm-close-surface = false
 mouse-hide-while-typing = true
 copy-on-select = true
 scrollback-limit = 10000
 
-# --- Shell integration ---
 shell-integration = detect
 shell-integration-features = cursor,sudo,title
-
