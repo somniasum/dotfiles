@@ -1,0 +1,55 @@
+{
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 13.5,
+  "buffer_font_family": "Geist Mono",
+  "theme": {
+    "mode": "dark",
+    "dark": "Ghostty Dark",
+    "light": "Ayu Light",
+  },
+  "terminal": {
+    "font_family": "Geist Mono",
+    "font_size": 13.5,
+    "blinking": "on",
+    "cursor_shape": "bar",
+    "env": {},
+  },
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": true,
+            "forwardSearchAfter": true,
+            "executable": "latexmk",
+            "args": ["-synctex=1", "-pdf", "-interaction=nonstopmode", "%f"],
+          },
+          "latexindent": {
+            "modifyLineBreaks": true,
+          },
+        },
+      },
+    },
+  },
+}
