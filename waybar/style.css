@@ -1,0 +1,130 @@
+/* waybar/style.css — dark, flat, minimal
+ *
+ * Palette:
+ *   base    #0a0a0a  bar background
+ *   surface #1a1a1a  module hover
+ *   border  #2d2d2d  separators
+ *   text    #e0e0e0  primary
+ *   dim     #888888  dimmed / window title
+ *   blue    #7aa2f7  accent / active workspace
+ *   yellow  #e0af68  warning state
+ *   red     #f7768e  critical state
+ */
+
+* {
+    font-family:  "Inter", "JetBrainsMono Nerd Font", sans-serif;
+    font-size:    12px;
+    min-height:   0;
+    border:       none;
+    border-radius: 0;
+    box-shadow:   none;
+}
+
+window#waybar {
+    background:    rgba(10, 10, 10, 0.94);
+    color:         #e0e0e0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── Workspaces ────────────────────────────────── */
+#workspaces {
+    margin:  0 4px;
+    padding: 0;
+}
+
+#workspaces button {
+    padding:       0 9px;
+    margin:        4px 2px;
+    background:    transparent;
+    color:         #555555;
+    border-radius: 4px;
+    min-width:     20px;
+    transition:    all 0.12s ease;
+}
+
+#workspaces button.active {
+    background:  #7aa2f7;
+    color:       #0a0a0a;
+    font-weight: 600;
+}
+
+#workspaces button.occupied {
+    color: #a0a0a0;
+}
+
+#workspaces button:hover {
+    background: rgba(122, 162, 247, 0.14);
+    color:      #cccccc;
+}
+
+/* ── Window title ──────────────────────────────── */
+#window {
+    padding: 0 10px;
+    color:   #666666;
+    font-size: 11px;
+}
+
+/* ── All right-side modules ────────────────────── */
+#cpu,
+#temperature,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#clock {
+    padding: 0 12px;
+    color:   #b0b0b0;
+}
+
+/* Subtle separator between modules */
+#cpu,
+#temperature,
+#memory,
+#network,
+#pulseaudio {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── State colors ──────────────────────────────── */
+#cpu.warning,
+#memory.warning {
+    color: #e0af68;
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    color: #f7768e;
+}
+
+/* ── Clock ─────────────────────────────────────── */
+#clock {
+    color:          #e0e0e0;
+    font-weight:    500;
+    letter-spacing: 0.2px;
+    border-right:   none;
+}
+
+/* ── Tray ──────────────────────────────────────── */
+#tray {
+    padding: 0 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #f7768e;
+    border-radius:    4px;
+}
+
+/* ── Tooltip ───────────────────────────────────── */
+tooltip {
+    background:   rgba(26, 26, 26, 0.97);
+    color:        #e0e0e0;
+    border:       1px solid #2d2d2d;
+    border-radius: 6px;
+    padding:      4px 8px;
+}
